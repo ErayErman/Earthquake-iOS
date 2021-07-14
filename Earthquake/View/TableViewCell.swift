@@ -41,40 +41,6 @@ class TableViewCell: UITableViewCell {
         
         
         // Setting Colors
-        /*
-        if doubleMag! < 2.0 {
-            leftView.backgroundColor = UIColor.gray
-            leftSecondView.backgroundColor = UIColor.gray
-        }else if doubleMag! >= 2.0 && doubleMag! < 3.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 3.0 && doubleMag! < 4.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 4.0 && doubleMag! < 5.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 5.0 && doubleMag! < 6.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 6.0 && doubleMag! < 7.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 7.0 && doubleMag! < 8.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 8.0 && doubleMag! < 9.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 9.0 && doubleMag! < 10.0{
-            leftView.backgroundColor = UIColor.green
-            leftSecondView.backgroundColor = UIColor.green
-        }else if doubleMag! >= 10.0 && doubleMag! < 11.0{
-            leftView.backgroundColor = UIColor.red
-            leftSecondView.backgroundColor = UIColor.red
-        }
-        */
-        
         
         switch doubleMag! {
         case 2.0..<3 :
