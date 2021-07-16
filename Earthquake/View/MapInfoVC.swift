@@ -31,11 +31,13 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Depremler"
         infoMap.delegate = self
         locationManager.delegate = self
-        locationManager.startUpdatingLocation()
-        self.title = "Depremler"
         setupUI()
+        
+        
+        
         
         
     }
@@ -51,15 +53,13 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         longitudeLabel.text = String(viewModel.data.longitude!) + " E"
         mdLabel.text = String(viewModel.data.md!)
         mlLabel.text = String(viewModel.data.ml!)
-
-        
-        
-    }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = CLLocationCoordinate2D(latitude: viewModel.data.latitude!, longitude: viewModel.data.longitude!)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: location, span: span)
         infoMap.setRegion(region, animated: true)
+
+        
+        
     }
  
 
