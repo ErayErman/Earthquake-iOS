@@ -47,23 +47,21 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         middleView.layer.cornerRadius = 8
         leftView.layer.cornerRadius = 8
         innerInfoView.setupUI(model: viewModel.data)
+        latitudeLabel.text = String(viewModel.data.latitude!) + " N"
+        longitudeLabel.text = String(viewModel.data.longitude!) + " E"
+        mdLabel.text = String(viewModel.data.md!)
+        mlLabel.text = String(viewModel.data.ml!)
+
         
         
-        
-        /*
-        latitudeLabel.text = String(tableViewCell.latitude)
-        longitudeLabel.text = String(tableViewCell.longitude)
-        //mlLabel.text = tableViewCell.magnitudeLabel.text
-        mdLabel.text = tableViewCell.mdlabel
-        */
     }
-    /*func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = CLLocationCoordinate2D(latitude: tableViewCell.latitude, longitude: tableViewCell.longitude)
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = CLLocationCoordinate2D(latitude: viewModel.data.latitude!, longitude: viewModel.data.longitude!)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: location, span: span)
         infoMap.setRegion(region, animated: true)
     }
- */
+ 
 
 
 }
