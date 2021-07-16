@@ -12,8 +12,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    let searchController = UISearchController(searchResultsController: nil)
     let viewModel = ViewModel()
+    
     var data: [EQDataModel] = []
+    var filteredData: [EQDataModel] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,6 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier )
+        filteredData = viewModel.data
+        
         
     }
     
@@ -72,7 +78,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    
-
 }
 

@@ -53,10 +53,14 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         longitudeLabel.text = String(viewModel.data.longitude!) + " E"
         mdLabel.text = String(viewModel.data.md!)
         mlLabel.text = String(viewModel.data.ml!)
+        
         let location = CLLocationCoordinate2D(latitude: viewModel.data.latitude!, longitude: viewModel.data.longitude!)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: location, span: span)
         infoMap.setRegion(region, animated: true)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        self.infoMap.addAnnotation(annotation)
 
         
         
@@ -65,4 +69,5 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
 
 
 }
+
 
