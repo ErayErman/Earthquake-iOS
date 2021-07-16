@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel = ViewModel()
-    
+    var data: [EQDataModel] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -59,8 +59,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toMap", sender: nil)
+        let sendedData = viewModel.data[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: false)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "MapInfoVC") as! MapInfoVC
+        let vm = MapInfoVM.init(sendedData)
+        vc.viewModel = vm
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
+        
     }
+    
 
 }
 
