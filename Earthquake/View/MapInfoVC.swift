@@ -21,7 +21,8 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var rightView: UIView!
-   
+    @IBOutlet weak var topSeperator: UIView!
+    
     var locationManager = CLLocationManager()
     
     
@@ -48,6 +49,7 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         rightView.layer.cornerRadius = 8
         middleView.layer.cornerRadius = 8
         leftView.layer.cornerRadius = 8
+        topSeperator.layer.cornerRadius = 12
         innerInfoView.setupUI(model: viewModel.data)
         latitudeLabel.text = String(viewModel.data.latitude!) + " N"
         longitudeLabel.text = String(viewModel.data.longitude!) + " E"

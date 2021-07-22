@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Earthquake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rzt-hG-p46">
-                                <rect key="frame" x="0.0" y="165" width="390" height="645"/>
+                                <rect key="frame" x="0.0" y="77" width="390" height="645"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <sections/>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Konum ara" translatesAutoresizingMaskIntoConstraints="NO" id="nkA-Nw-2BT">
-                                <rect key="frame" x="0.0" y="106" width="346" height="44"/>
+                                <rect key="frame" x="0.0" y="18" width="346" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -70,6 +70,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-t9-jg1">
                                         <rect key="frame" x="0.0" y="386" width="390" height="380"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-PW-GwI">
+                                                <rect key="frame" x="180" y="5" width="30" height="10"/>
+                                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="EWi-Nq-AnB"/>
+                                                    <constraint firstAttribute="height" constant="10" id="ajp-4Q-oOS"/>
+                                                </constraints>
+                                            </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sis-vh-Eeg">
                                                 <rect key="frame" x="5" y="0.0" width="380" height="380"/>
                                                 <subviews>
@@ -214,7 +222,7 @@
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="Ctt-xU-5n2" firstAttribute="top" secondItem="sis-vh-Eeg" secondAttribute="top" constant="182" id="KBp-Fl-f3I"/>
+                                                    <constraint firstItem="Ctt-xU-5n2" firstAttribute="top" secondItem="sis-vh-Eeg" secondAttribute="top" constant="181" id="KBp-Fl-f3I"/>
                                                 </constraints>
                                                 <edgeInsets key="layoutMargins" top="28" left="8" bottom="38" right="8"/>
                                             </stackView>
@@ -223,10 +231,14 @@
                                         <constraints>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="height" secondItem="AQ0-t9-jg1" secondAttribute="height" id="0BF-P8-bUS"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="centerX" secondItem="AQ0-t9-jg1" secondAttribute="centerX" id="CPw-ng-ICB"/>
+                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="leading" secondItem="AQ0-t9-jg1" secondAttribute="leading" constant="100" id="ZlE-0G-F9g"/>
                                             <constraint firstAttribute="bottom" secondItem="sis-vh-Eeg" secondAttribute="bottom" id="dNU-Iw-QYr"/>
+                                            <constraint firstAttribute="trailing" secondItem="V4X-PW-GwI" secondAttribute="trailing" constant="100" id="dWc-5X-lRG"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="top" secondItem="AQ0-t9-jg1" secondAttribute="top" id="fE6-sq-JNA"/>
+                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="top" secondItem="AQ0-t9-jg1" secondAttribute="top" constant="5" id="muA-JZ-ZQ9"/>
                                             <constraint firstAttribute="trailing" secondItem="sis-vh-Eeg" secondAttribute="trailing" constant="5" id="sGl-BP-ait"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="leading" secondItem="AQ0-t9-jg1" secondAttribute="leading" constant="5" id="u2l-w4-MNH"/>
+                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="centerX" secondItem="AQ0-t9-jg1" secondAttribute="centerX" id="w8Q-9d-Pe7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -261,6 +273,7 @@
                         <outlet property="middleView" destination="ToR-LV-4zr" id="eP7-iP-AOf"/>
                         <outlet property="mlLabel" destination="SPd-2i-mAW" id="cmx-J9-klx"/>
                         <outlet property="rightView" destination="TF3-NF-SjN" id="FvV-TE-diz"/>
+                        <outlet property="topSeperator" destination="V4X-PW-GwI" id="Cfl-fM-n21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcb-Yl-eFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -272,9 +285,16 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SWe-B6-jIr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NwJ-7R-dft">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NwJ-7R-dft">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.050173791391825456" green="0.03196914096231436" blue="0.26071458010329418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -295,6 +315,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
