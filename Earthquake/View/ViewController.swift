@@ -12,11 +12,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    let searchController = UISearchController(searchResultsController: nil)
     let viewModel = ViewModel()
-    
     var data: [EQDataModel] = []
     var filteredData: [EQDataModel] = []
+    var filter = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +24,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setupVM()
         self.title = "Son Depremler"
         
-        
-               
     }
     
     private func setupUI() {
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.searchBar.delegate = self
         self.tableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier )
-        filteredData = viewModel.data
-        
         
     }
     
@@ -48,16 +44,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
     }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.data = viewModel.data
+        filteredData = data.filter {$0.place!.lowercased().prefix(searchText.count) == searchText.lowercased()}
+        filter = true
+        tableView.reloadData()
+        
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.text = ""
+        filter = false
+        tableView.reloadData()
+    }
 
      
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  viewModel.data.count } //viewModel.data.count
+        if !filteredData.isEmpty {
+           return filteredData.count
+        }else {return viewModel.data.count}
+            
+        
+        
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = viewModel.data[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as! TableViewCell
-        cell.setupUI(model: data)
+        if filteredData.isEmpty {
+            let data = viewModel.data[indexPath.row]
+            cell.setupUI(model: data)
+        }else{
+            let fData = filteredData[indexPath.row]
+            cell.setupUI(model: fData)
+        }
+        
         return cell
     }
     
@@ -66,7 +87,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let sendedData = viewModel.data[indexPath.row]
+        var sendedData = viewModel.data[indexPath.row]
+        if !filteredData.isEmpty {
+            sendedData = filteredData[indexPath.row]
+        }
         tableView.deselectRow(at: indexPath, animated: false)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(identifier: "MapInfoVC") as! MapInfoVC

@@ -22,36 +22,33 @@
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <sections/>
                             </tableView>
-                            <searchBar contentMode="redraw" placeholder="Konum arayın" translatesAutoresizingMaskIntoConstraints="NO" id="pxE-wp-J9f">
-                                <rect key="frame" x="11" y="104" width="324" height="44"/>
+                            <searchBar contentMode="redraw" placeholder="Konum ara" translatesAutoresizingMaskIntoConstraints="NO" id="nkA-Nw-2BT">
+                                <rect key="frame" x="0.0" y="106" width="346" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xg0-AP-t12"/>
-                                </connections>
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="pxE-wp-J9f" firstAttribute="leading" secondItem="rzt-hG-p46" secondAttribute="leading" constant="11" id="Ajb-C1-SgY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nkA-Nw-2BT" secondAttribute="trailing" constant="44" id="0w4-Tp-gmQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rzt-hG-p46" secondAttribute="bottom" id="DxX-sM-vhI"/>
-                            <constraint firstItem="rzt-hG-p46" firstAttribute="top" secondItem="pxE-wp-J9f" secondAttribute="bottom" constant="17" id="F0w-54-PFw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pxE-wp-J9f" secondAttribute="trailing" constant="55" id="Owz-PG-3C2"/>
+                            <constraint firstItem="rzt-hG-p46" firstAttribute="top" secondItem="nkA-Nw-2BT" secondAttribute="bottom" constant="15" id="F5m-pz-WHP"/>
+                            <constraint firstItem="nkA-Nw-2BT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="RpN-ph-Ndb"/>
+                            <constraint firstItem="nkA-Nw-2BT" firstAttribute="leading" secondItem="rzt-hG-p46" secondAttribute="leading" id="YL5-3T-vof"/>
                             <constraint firstItem="rzt-hG-p46" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="YOv-uX-fKx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rzt-hG-p46" secondAttribute="trailing" id="Yy8-73-sLX"/>
-                            <constraint firstItem="pxE-wp-J9f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="hq2-A5-uNM"/>
                             <constraint firstItem="rzt-hG-p46" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sfj-Ch-Q1E"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ipR-fZ-eyY"/>
                     <connections>
-                        <outlet property="searchBar" destination="pxE-wp-J9f" id="b3h-UM-GGx"/>
+                        <outlet property="searchBar" destination="nkA-Nw-2BT" id="hYz-C4-jMu"/>
                         <outlet property="tableView" destination="rzt-hG-p46" id="83r-Rf-XpU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="939.13043478260875" y="88.392857142857139"/>
+            <point key="canvasLocation" x="938.46153846153845" y="88.151658767772503"/>
         </scene>
         <!--MapInfo-->
         <scene sceneID="3Qy-Yg-8ah">
@@ -66,6 +63,9 @@
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o27-gI-AHz">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="380" id="x0Y-mj-OpL"/>
+                                        </constraints>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-t9-jg1">
                                         <rect key="frame" x="0.0" y="386" width="390" height="380"/>
@@ -81,8 +81,15 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-Ri-MDB">
-                                                        <rect key="frame" x="8" y="115" width="364" height="67"/>
+                                                        <rect key="frame" x="8" y="115" width="364" height="56"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-xU-5n2">
+                                                        <rect key="frame" x="8" y="181" width="364" height="1"/>
+                                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="O8w-fx-L14"/>
+                                                        </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-J4-ovT">
                                                         <rect key="frame" x="8" y="192" width="364" height="150"/>
@@ -119,7 +126,7 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                                <color key="backgroundColor" red="1" green="0.75225680399999995" blue="0.9638648326" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="trailing" secondItem="lwf-dW-CNx" secondAttribute="trailing" id="7qF-Pd-1PY"/>
                                                                     <constraint firstItem="lwf-dW-CNx" firstAttribute="centerX" secondItem="CAZ-3x-9pO" secondAttribute="centerX" id="B0Z-bj-3Zf"/>
@@ -154,7 +161,7 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                                <color key="backgroundColor" red="1" green="0.75225680399999995" blue="0.9638648326" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstItem="C1T-6X-vsb" firstAttribute="leading" secondItem="ToR-LV-4zr" secondAttribute="leading" id="FmF-c7-vkR"/>
                                                                     <constraint firstItem="C1T-6X-vsb" firstAttribute="top" secondItem="ToR-LV-4zr" secondAttribute="top" id="Vtn-uG-zH3"/>
@@ -189,7 +196,7 @@
                                                                         </constraints>
                                                                     </stackView>
                                                                 </subviews>
-                                                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                                                <color key="backgroundColor" red="1" green="0.75223213430000002" blue="0.96559375520000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <constraints>
                                                                     <constraint firstItem="i9m-dP-AK5" firstAttribute="centerY" secondItem="TF3-NF-SjN" secondAttribute="centerY" id="5Iq-3l-TOr"/>
                                                                     <constraint firstItem="i9m-dP-AK5" firstAttribute="top" secondItem="TF3-NF-SjN" secondAttribute="top" id="5zQ-if-Xsz"/>
@@ -206,6 +213,9 @@
                                                         <edgeInsets key="layoutMargins" top="7" left="8" bottom="12" right="8"/>
                                                     </stackView>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="Ctt-xU-5n2" firstAttribute="top" secondItem="sis-vh-Eeg" secondAttribute="top" constant="182" id="KBp-Fl-f3I"/>
+                                                </constraints>
                                                 <edgeInsets key="layoutMargins" top="28" left="8" bottom="38" right="8"/>
                                             </stackView>
                                         </subviews>
@@ -255,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jcb-Yl-eFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1875.3846153846152" y="87.440758293838854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Vm-D1-gtl">
@@ -283,8 +293,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
