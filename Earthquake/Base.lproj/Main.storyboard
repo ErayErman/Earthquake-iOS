@@ -71,11 +71,11 @@
                                         <rect key="frame" x="0.0" y="386" width="390" height="380"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-PW-GwI">
-                                                <rect key="frame" x="180" y="5" width="30" height="10"/>
+                                                <rect key="frame" x="165" y="5" width="60" height="10"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="EWi-Nq-AnB"/>
-                                                    <constraint firstAttribute="height" constant="10" id="ajp-4Q-oOS"/>
+                                                    <constraint firstAttribute="width" constant="60" id="QsV-KD-D56"/>
+                                                    <constraint firstAttribute="height" constant="10" id="jYZ-Q9-6ie"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sis-vh-Eeg">
@@ -231,14 +231,12 @@
                                         <constraints>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="height" secondItem="AQ0-t9-jg1" secondAttribute="height" id="0BF-P8-bUS"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="centerX" secondItem="AQ0-t9-jg1" secondAttribute="centerX" id="CPw-ng-ICB"/>
-                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="leading" secondItem="AQ0-t9-jg1" secondAttribute="leading" constant="100" id="ZlE-0G-F9g"/>
+                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="centerX" secondItem="sis-vh-Eeg" secondAttribute="centerX" id="OAv-q8-AHW"/>
+                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="top" secondItem="AQ0-t9-jg1" secondAttribute="top" constant="5" id="Vck-sn-BOM"/>
                                             <constraint firstAttribute="bottom" secondItem="sis-vh-Eeg" secondAttribute="bottom" id="dNU-Iw-QYr"/>
-                                            <constraint firstAttribute="trailing" secondItem="V4X-PW-GwI" secondAttribute="trailing" constant="100" id="dWc-5X-lRG"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="top" secondItem="AQ0-t9-jg1" secondAttribute="top" id="fE6-sq-JNA"/>
-                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="top" secondItem="AQ0-t9-jg1" secondAttribute="top" constant="5" id="muA-JZ-ZQ9"/>
                                             <constraint firstAttribute="trailing" secondItem="sis-vh-Eeg" secondAttribute="trailing" constant="5" id="sGl-BP-ait"/>
                                             <constraint firstItem="sis-vh-Eeg" firstAttribute="leading" secondItem="AQ0-t9-jg1" secondAttribute="leading" constant="5" id="u2l-w4-MNH"/>
-                                            <constraint firstItem="V4X-PW-GwI" firstAttribute="centerX" secondItem="AQ0-t9-jg1" secondAttribute="centerX" id="w8Q-9d-Pe7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
