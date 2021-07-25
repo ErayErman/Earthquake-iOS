@@ -22,6 +22,8 @@
 		84ADEF26268C67C100598552 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84ADEF24268C67C100598552 /* TableViewCell.xib */; };
 		84B49030268DECD400B1C1AB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B4902F268DECD400B1C1AB /* ViewModel.swift */; };
 		84B49033268F555B00B1C1AB /* MapInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B49032268F555B00B1C1AB /* MapInfoVC.swift */; };
+		84F9B23A26AE147C00ACA84C /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9B23826AE147C00ACA84C /* CardViewController.swift */; };
+		84F9B23B26AE147C00ACA84C /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F9B23926AE147C00ACA84C /* CardViewController.xib */; };
 		FEF106EF5954A552C2CD1849 /* Pods_Earthquake.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEBA060414051517276AF2F1 /* Pods_Earthquake.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		84ADEF24268C67C100598552 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		84B4902F268DECD400B1C1AB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		84B49032268F555B00B1C1AB /* MapInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoVC.swift; sourceTree = "<group>"; };
+		84F9B23826AE147C00ACA84C /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		84F9B23926AE147C00ACA84C /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		EEBA060414051517276AF2F1 /* Pods_Earthquake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Earthquake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +117,8 @@
 				8429188A26A1A419007689F7 /* InfoView.xib */,
 				8429188D26A1A4DA007689F7 /* InfoView.swift */,
 				8429189026A1AAEA007689F7 /* BaseView.swift */,
+				84F9B23826AE147C00ACA84C /* CardViewController.swift */,
+				84F9B23926AE147C00ACA84C /* CardViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +217,7 @@
 			files = (
 				840BE0FD268B51FC0065EC72 /* LaunchScreen.storyboard in Resources */,
 				84ADEF26268C67C100598552 /* TableViewCell.xib in Resources */,
+				84F9B23B26AE147C00ACA84C /* CardViewController.xib in Resources */,
 				8429188B26A1A419007689F7 /* InfoView.xib in Resources */,
 				840BE0FA268B51FC0065EC72 /* Assets.xcassets in Resources */,
 				840BE0F8268B51EB0065EC72 /* Main.storyboard in Resources */,
@@ -274,6 +281,7 @@
 				84B49030268DECD400B1C1AB /* ViewModel.swift in Sources */,
 				840BE0F3268B51EB0065EC72 /* SceneDelegate.swift in Sources */,
 				8429189126A1AAEA007689F7 /* BaseView.swift in Sources */,
+				84F9B23A26AE147C00ACA84C /* CardViewController.swift in Sources */,
 				8429188E26A1A4DA007689F7 /* InfoView.swift in Sources */,
 				8429188726A19669007689F7 /* MapInfoVM.swift in Sources */,
 			);
