@@ -1,2 +1,1 @@
 # Earthquake
-# Earthquake_iOS
