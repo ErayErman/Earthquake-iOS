@@ -10,6 +10,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardViewController" customModule="Earthquake" customModuleProvider="target">
             <connections>
+                <outlet property="infoView" destination="m7a-bh-kM8" id="Hw3-PH-CRX"/>
+                <outlet property="innerInfoView" destination="bHw-KG-PJ3" id="hSg-96-ruA"/>
+                <outlet property="latitudeLabel" destination="MvK-CK-Vqb" id="xpu-bQ-1sS"/>
+                <outlet property="leftView" destination="F6Z-4i-Snm" id="6B9-FL-fuk"/>
+                <outlet property="longitudeLabel" destination="sOl-6g-3Gx" id="b70-vA-qn5"/>
+                <outlet property="mdLabel" destination="k8Z-f4-DOl" id="xZg-F9-zTG"/>
+                <outlet property="middleView" destination="hhB-Fz-ggw" id="oUv-rT-N6v"/>
+                <outlet property="mlLabel" destination="ZNz-3V-A1c" id="ceN-e4-Nt5"/>
+                <outlet property="rightView" destination="Ap1-8H-xzK" id="AHT-pt-FRD"/>
+                <outlet property="topSeperator" destination="u2T-vp-vgY" id="2sI-Ah-mFB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

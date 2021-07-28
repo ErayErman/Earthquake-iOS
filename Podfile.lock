@@ -1,20 +1,20 @@
 PODS:
   - Alamofire (5.4.3)
-  - SwiftyJSON (5.0.1)
+  - FloatingPanel (2.4.0)
 
 DEPENDENCIES:
   - Alamofire
-  - SwiftyJSON
+  - FloatingPanel
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - SwiftyJSON
+    - FloatingPanel
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
-  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
 
-PODFILE CHECKSUM: b8e7f2d378a8d1128fea7174e8ab6c1a33d4160e
+PODFILE CHECKSUM: bbd045b7b8a0d34f3bd22bca0d1901ec32076ad7
 
 COCOAPODS: 1.10.1

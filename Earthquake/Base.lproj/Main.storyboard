@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Earthquake" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Earthquake" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -59,16 +59,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Tg2-Kj-1TK">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="736"/>
                                 <subviews>
                                     <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o27-gI-AHz">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="380"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="365"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="380" id="x0Y-mj-OpL"/>
                                         </constraints>
                                     </mapView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ0-t9-jg1">
-                                        <rect key="frame" x="0.0" y="386" width="390" height="380"/>
+                                        <rect key="frame" x="0.0" y="371" width="390" height="365"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V4X-PW-GwI">
                                                 <rect key="frame" x="165" y="5" width="60" height="10"/>
@@ -79,7 +79,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sis-vh-Eeg">
-                                                <rect key="frame" x="5" y="0.0" width="380" height="380"/>
+                                                <rect key="frame" x="5" y="0.0" width="380" height="365"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Cd-vF-9EQ" customClass="InfoView" customModule="Earthquake" customModuleProvider="target">
                                                         <rect key="frame" x="8" y="28" width="364" height="77"/>
@@ -89,18 +89,18 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-Ri-MDB">
-                                                        <rect key="frame" x="8" y="115" width="364" height="56"/>
+                                                        <rect key="frame" x="8" y="115" width="364" height="41"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ctt-xU-5n2">
-                                                        <rect key="frame" x="8" y="181" width="364" height="1"/>
+                                                        <rect key="frame" x="8" y="166" width="364" height="1"/>
                                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="O8w-fx-L14"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D4p-J4-ovT">
-                                                        <rect key="frame" x="8" y="192" width="364" height="150"/>
+                                                        <rect key="frame" x="8" y="177" width="364" height="150"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="CAZ-3x-9pO">
                                                                 <rect key="frame" x="8" y="7" width="109.33333333333333" height="131"/>
@@ -251,7 +251,7 @@
                         <viewLayoutGuide key="safeArea" id="TKS-Iw-jVk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TKS-Iw-jVk" firstAttribute="bottom" secondItem="Tg2-Kj-1TK" secondAttribute="bottom" id="5hr-kd-IjO"/>
+                            <constraint firstItem="TKS-Iw-jVk" firstAttribute="bottom" secondItem="Tg2-Kj-1TK" secondAttribute="bottom" constant="30" id="5hr-kd-IjO"/>
                             <constraint firstItem="Tg2-Kj-1TK" firstAttribute="top" secondItem="TKS-Iw-jVk" secondAttribute="top" id="6jZ-cy-a3T"/>
                             <constraint firstItem="Tg2-Kj-1TK" firstAttribute="centerX" secondItem="TKS-Iw-jVk" secondAttribute="centerX" id="Tc6-0z-afH"/>
                             <constraint firstItem="Tg2-Kj-1TK" firstAttribute="centerY" secondItem="TKS-Iw-jVk" secondAttribute="centerY" id="hD0-zG-z6O"/>
@@ -286,7 +286,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NwJ-7R-dft">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.050173791391825456" green="0.03196914096231436" blue="0.26071458010329418" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.21962849445042537" green="0.14540927688069105" blue="0.58199286706668807" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>

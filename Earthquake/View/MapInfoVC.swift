@@ -8,8 +8,9 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FloatingPanel
 
-class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, FloatingPanelControllerDelegate {
 
     @IBOutlet weak var innerInfoView: InfoView!
     @IBOutlet weak var infoMap: MKMapView!
@@ -42,6 +43,18 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate 
         
         
     }
+    func setupFloatingPanel(){
+        let fpc = FloatingPanelController()
+        fpc.delegate = self
+        
+        guard let contentVC = storyboard?.instantiateViewController(identifier: "ViewController") as? CardViewController
+        else {
+            
+            return  }
+        fpc.set(contentViewController: contentVC)
+        fpc.addPanel(toParent: self)
+    }
+    
     func setupUI(){
         
         infoView.layer.cornerRadius = 10

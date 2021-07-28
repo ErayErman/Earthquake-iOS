@@ -7,5 +7,5 @@ target 'Earthquake' do
 
   # Pods for Earthquake
 pod "Alamofire"
-pod 'SwiftyJSON'
+pod "FloatingPanel"
 end
