@@ -286,6 +286,61 @@
             </objects>
             <point key="canvasLocation" x="1875.3846153846152" y="87.440758293838854"/>
         </scene>
+        <!--AboutVC-->
+        <scene sceneID="W2k-5w-ZOf">
+            <objects>
+                <viewController storyboardIdentifier="AboutVC" id="pQw-5l-lzo" customClass="AboutVC" customModule="Earthquake" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qDy-bE-AaX">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deprem Bilgi Uygulaması" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZf-M2-ApD">
+                                <rect key="frame" x="52" y="109" width="307" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="yoz-X1-OZC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.23752317049999999" green="0.15725679200000001" blue="0.62941191370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Softtech @ 2021" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSm-QG-KhT">
+                                <rect key="frame" x="89" y="738" width="209" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="i1b-og-057"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SRJ-W7-JQB">
+                                <rect key="frame" x="31" y="222" width="328" height="233"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="Ft4-CX-hV9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cPc-Wm-rB1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SRJ-W7-JQB" firstAttribute="leading" secondItem="cPc-Wm-rB1" secondAttribute="leading" constant="31" id="8XG-T5-cU3"/>
+                            <constraint firstItem="TSm-QG-KhT" firstAttribute="leading" secondItem="cPc-Wm-rB1" secondAttribute="leading" constant="89" id="DWw-V0-Nha"/>
+                            <constraint firstItem="SRJ-W7-JQB" firstAttribute="top" secondItem="XZf-M2-ApD" secondAttribute="bottom" constant="59" id="PDe-MO-nEK"/>
+                            <constraint firstItem="cPc-Wm-rB1" firstAttribute="bottom" secondItem="TSm-QG-KhT" secondAttribute="bottom" constant="51" id="Pgd-rN-mZA"/>
+                            <constraint firstItem="XZf-M2-ApD" firstAttribute="trailing" secondItem="SRJ-W7-JQB" secondAttribute="trailing" id="RYG-qU-AIR"/>
+                            <constraint firstItem="XZf-M2-ApD" firstAttribute="top" secondItem="cPc-Wm-rB1" secondAttribute="top" constant="65" id="UuC-cL-aoe"/>
+                            <constraint firstItem="cPc-Wm-rB1" firstAttribute="trailing" secondItem="TSm-QG-KhT" secondAttribute="trailing" constant="92" id="WL1-cF-gxZ"/>
+                            <constraint firstItem="cPc-Wm-rB1" firstAttribute="trailing" secondItem="XZf-M2-ApD" secondAttribute="trailing" constant="31" id="dcO-sS-ZUM"/>
+                            <constraint firstItem="XZf-M2-ApD" firstAttribute="leading" secondItem="cPc-Wm-rB1" secondAttribute="leading" constant="52" id="eMa-8C-2DB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="SRJ-W7-JQB" id="WWf-Op-PNY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZy-AZ-a33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2787.6923076923076" y="86.729857819905206"/>
+        </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="2Vm-D1-gtl">
             <objects>

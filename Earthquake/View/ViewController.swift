@@ -161,6 +161,12 @@ class MenuListController : UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if indexPath.row == 2 {
+            let vc = storyboard.instantiateViewController(identifier: "AboutVC") as! AboutVC
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
 }
