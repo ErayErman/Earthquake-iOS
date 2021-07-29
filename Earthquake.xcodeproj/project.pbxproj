@@ -87,12 +87,12 @@
 		840BE0EF268B51EB0065EC72 /* Earthquake */ = {
 			isa = PBXGroup;
 			children = (
+				840BE0F9268B51FC0065EC72 /* Assets.xcassets */,
 				84ADEF2A268C9D9700598552 /* Service */,
 				84ADEF29268C9D8C00598552 /* View Model */,
 				84ADEF22268C679400598552 /* View */,
 				84ADEF1D268C626900598552 /* Model */,
 				840BE0F6268B51EB0065EC72 /* Main.storyboard */,
-				840BE0F9268B51FC0065EC72 /* Assets.xcassets */,
 				840BE0FB268B51FC0065EC72 /* LaunchScreen.storyboard */,
 				840BE0FE268B51FC0065EC72 /* Info.plist */,
 			);

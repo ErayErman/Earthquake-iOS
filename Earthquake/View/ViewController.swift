@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     
     let viewModel = ViewModel()
     var data: [EQDataModel] = []
@@ -27,7 +28,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         setupUI()
         setupVM()
         setupMenu()
+        hideKeyboardWhenTappedAround()
         
+    }
+    
+    @IBAction func dataSourceChanged(_ sender: Any) {
+        
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            viewModel.urlString = "https://apps.furkansandal.com/st/intern"
+        case 1:
+            viewModel.urlString = "https://apps.furkansandal.com/st/intern"
+        default:
+            break
+        }
         
     }
     
@@ -62,6 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         filter = false
         tableView.reloadData()
     }
+    
 
      
     
@@ -132,7 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 class MenuListController : UITableViewController {
     
     @IBOutlet 
-    var items = ["Kandilli Rasathanesi", "AFAD", "Hakkında"]
+    var items = ["Hakkında", "Kandilli Rasathanesi", "AFAD"]
     
     let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha:1)
     
@@ -143,9 +158,6 @@ class MenuListController : UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Seçenekler"
-    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -162,13 +174,37 @@ class MenuListController : UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if indexPath.row == 2 {
+        switch indexPath.row {
+        case 0:
             let vc = storyboard.instantiateViewController(identifier: "AboutVC") as! AboutVC
             navigationController?.pushViewController(vc, animated: true)
+        case 1:
+            guard let url = URL(string: "http://www.koeri.boun.edu.tr/new/") else { return }
+            UIApplication.shared.open(url)
+        case 2:
+            guard let url = URL(string: "https://deprem.afad.gov.tr") else { return }
+            UIApplication.shared.open(url)
+        default:
+            break
         }
+        
+        /*if indexPath.row == 0 {
+            let vc = storyboard.instantiateViewController(identifier: "AboutVC") as! AboutVC
+            navigationController?.pushViewController(vc, animated: true)
+        }*/
         
     }
     
 }
-
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
 

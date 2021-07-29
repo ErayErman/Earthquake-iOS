@@ -35,7 +35,7 @@ class InfoView : BaseView {
         self.mdlabel = model.md!
         
         
-        // Setting Colors
+        // Color Settings
         
         switch doubleMag! {
         case 2.0..<3 :

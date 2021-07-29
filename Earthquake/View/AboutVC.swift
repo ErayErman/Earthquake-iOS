@@ -13,7 +13,6 @@ class AboutVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.image = UIImage(named: "")
         imageView.image = #imageLiteral(resourceName: "Softtech-Logo_standart-2")
     }
 

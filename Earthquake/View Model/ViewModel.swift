@@ -12,11 +12,10 @@ class ViewModel {
     
     var data: [EQDataModel] = []
     var updateUI: (() -> Void) = {}
-    
+    var urlString: String = "https://apps.furkansandal.com/st/intern"
 
     func getData(){
         
-        let urlString: String = "https://apps.furkansandal.com/st/intern"
         AF.request(urlString).responseJSON { [weak self] response in
             guard let self = self else { return }
             let dataModel: DataModel = try! JSONDecoder().decode(DataModel.self, from: response.data!)
