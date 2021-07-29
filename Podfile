@@ -8,4 +8,5 @@ target 'Earthquake' do
   # Pods for Earthquake
 pod "Alamofire"
 pod "FloatingPanel"
+pod "SideMenu"
 end

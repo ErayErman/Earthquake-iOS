@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.4.3)
   - FloatingPanel (2.4.0)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
   - Alamofire
   - FloatingPanel
+  - SideMenu
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FloatingPanel
+    - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FloatingPanel: fa60183672ed86313b9e241e34465e82211260e8
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: bbd045b7b8a0d34f3bd22bca0d1901ec32076ad7
+PODFILE CHECKSUM: cdf55a2afffa8f83fd6b91a9149a18b26b4ed3b9
 
 COCOAPODS: 1.10.1

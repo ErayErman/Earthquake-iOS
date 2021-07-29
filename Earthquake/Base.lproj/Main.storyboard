@@ -40,8 +40,16 @@
                             <constraint firstItem="rzt-hG-p46" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sfj-Ch-Q1E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ipR-fZ-eyY"/>
+                    <navigationItem key="navigationItem" id="ipR-fZ-eyY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="line.horizontal.3.decrease" catalog="system" id="OtS-Vs-9If">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="didClickedMenuButton:" destination="BYZ-38-t0r" id="bsM-XP-1T9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="menuButton" destination="OtS-Vs-9If" id="bd5-47-MkC"/>
                         <outlet property="searchBar" destination="nkA-Nw-2BT" id="hYz-C4-jMu"/>
                         <outlet property="tableView" destination="rzt-hG-p46" id="83r-Rf-XpU"/>
                     </connections>
@@ -278,10 +286,10 @@
             </objects>
             <point key="canvasLocation" x="1875.3846153846152" y="87.440758293838854"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Side Menu Navigation Controller-->
         <scene sceneID="2Vm-D1-gtl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SWe-B6-jIr" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SWe-B6-jIr" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="NwJ-7R-dft">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -295,6 +303,12 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="GUm-TX-88t"/>
                     </connections>
@@ -305,6 +319,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="line.horizontal.3.decrease" catalog="system" width="128" height="73"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
