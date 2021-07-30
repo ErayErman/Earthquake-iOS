@@ -36,7 +36,9 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         self.title = "Depremler"
         infoMap.delegate = self
         locationManager.delegate = self
-        setupUI()
+        setupFloatingPanel()
+        //setupUI()
+        setupMap()
         
         
         
@@ -47,17 +49,19 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         let fpc = FloatingPanelController()
         fpc.delegate = self
         
-        guard let contentVC = storyboard?.instantiateViewController(identifier: "ViewController") as? CardViewController
+        guard let contentVC = storyboard?.instantiateViewController(identifier: "CardViewController") as? CardViewController
         else {
             
             return  }
+        contentVC.viewModel = self.viewModel
         fpc.set(contentViewController: contentVC)
         fpc.addPanel(toParent: self)
+        
+        
     }
     
     func setupUI(){
         
-        infoView.layer.cornerRadius = 10
         
         rightView.layer.cornerRadius = 8
         middleView.layer.cornerRadius = 8
@@ -69,6 +73,12 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         mdLabel.text = String(viewModel.data.md!)
         mlLabel.text = String(viewModel.data.ml!)
         
+        
+
+        
+        
+    }
+    func setupMap(){
         let location = CLLocationCoordinate2D(latitude: viewModel.data.latitude!, longitude: viewModel.data.longitude!)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         let region = MKCoordinateRegion(center: location, span: span)
@@ -76,10 +86,10 @@ class MapInfoVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate,
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         self.infoMap.addAnnotation(annotation)
-
         
         
     }
+    
  
 
 

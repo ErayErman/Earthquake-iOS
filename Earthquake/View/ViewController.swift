@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let viewModel = ViewModel()
     var data: [EQDataModel] = []
     var filteredData: [EQDataModel] = []
-    var filter = false
     var menu: SideMenuNavigationController?
     
     
@@ -34,14 +33,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func dataSourceChanged(_ sender: Any) {
         
-        switch segmentControl.selectedSegmentIndex {
-        case 0:
-            viewModel.urlString = "https://apps.furkansandal.com/st/intern"
-        case 1:
-            viewModel.urlString = "https://apps.furkansandal.com/st/intern"
-        default:
-            break
-        }
+        viewModel.setServiceType(type: segmentControl.selectedSegmentIndex)
         
     }
     
@@ -66,14 +58,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.data = viewModel.data
-        filteredData = data.filter {$0.place!.lowercased().prefix(searchText.count) == searchText.lowercased()}
-        filter = true
+        filteredData = data.filter {$0.place!.lowercased().contains(searchText.lowercased())}
         tableView.reloadData()
         
     }
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         self.searchBar.text = ""
-        filter = false
         tableView.reloadData()
     }
     
@@ -118,9 +108,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let vm = MapInfoVM.init(sendedData)
         vc.viewModel = vm
         navigationController?.pushViewController(vc, animated: true)
-        
-        
-        
+       
     }
     
     func setupMenu (){

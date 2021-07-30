@@ -18,30 +18,27 @@ class CardViewController: UIViewController {
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var rightView: UIView!
-    @IBOutlet weak var topSeperator: UIView!
     
     var viewModel: MapInfoVM!
-    static let identifier = "CardViewController"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCard()
-
-        
     }
     
     func setupCard(){
-        
         infoView.layer.cornerRadius = 10
+        
         rightView.layer.cornerRadius = 8
         middleView.layer.cornerRadius = 8
         leftView.layer.cornerRadius = 8
-        topSeperator.layer.cornerRadius = 12
         innerInfoView.setupUI(model: viewModel.data)
         latitudeLabel.text = String(viewModel.data.latitude!) + " N"
         longitudeLabel.text = String(viewModel.data.longitude!) + " E"
         mdLabel.text = String(viewModel.data.md!)
         mlLabel.text = String(viewModel.data.ml!)
+        
+        
     }
 
 
